@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\De;
+use App\Models\Para;
 use Illuminate\Http\Request;
 use Illuminate\Mail\Mailer;
 use Illuminate\Routing\Controller as BaseController;
@@ -9,6 +11,19 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 
 class Controller extends BaseController
 {
+
+    /**
+     * @var \App\Models\De
+     */
+    private $de;
+
+    /**
+     * @param \App\Models\De $de
+     */
+    public function __construct(De $de)
+    {
+        $this->de = $de;
+    }
 
     /**
      * Recebe os dados enviados pelo formulário para cadastrar na base de dados e envia um e-mail
@@ -20,16 +35,34 @@ class Controller extends BaseController
     {
         $params = $request->all();
 
+
+        $para = new Para();
+        $find = $para->where('email', $params['para']['email']);
+
+        if ($find->count()) {
+            return new JsonResponse('Esse email já foi convidado para participar do sorteio');
+        }
+
+        $de = new De($params['de']);
+        $de->save();
+
+        $params['para']['token'] = sprintf('%s|%s|%s', $params['de']['email'], $params['de']['usuario_github'], $de->id);
+
+        $para = new Para($params['para']);
+        $para->save();
+
+        $para->convite()->attach($de->id);
+
         $mailer->send('de_email', [ 'params' => $params ], function($email) use ($params) {
             $email->from(
-                $params['de_email'],
-                $params['de_usuario_github']
+                $params['de']['email'],
+                $params['de']['usuario_github']
             );
             $email->to(
-                $params['para_email'],
-                $params['para_usuario_github']
+                $params['para']['email'],
+                $params['para']['usuario_github']
             );
-            $email->subject(sprintf('Você acabou de convidar %s!', $params['para_usuario_github']));
+            $email->subject(sprintf('Você acabou de convidar %s!', $params['para']['usuario_github']));
         });
 
         return new JsonResponse(['mensagem' => 'Convite de participação enviado']);
@@ -37,10 +70,22 @@ class Controller extends BaseController
 
     /**
      * Confirma a inscrição do usuário convidado
-     * @param $hash
-     * @param $de
+     * @param $token
+     * @return JsonResponse
      */
-    public function getConfirmarParticipacao($hash, $de)
+    public function getConfirmarParticipacao($token)
     {
+        $para = new Para();
+        $convite = $para->where('token', $token)->where('confirmado', false);
+
+        if ($convite->count()) {
+            $convite->update([
+                'confirmado' => true
+            ]);
+
+            return new JsonResponse('Convite confirmado com sucesso');
+        }
+
+        return new JsonResponse('Não foi possível confirmar o convite');
     }
 }

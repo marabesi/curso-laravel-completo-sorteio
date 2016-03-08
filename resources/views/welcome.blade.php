@@ -139,7 +139,7 @@
                 <a href="images/work_1.jpg" class="fh5co-project-item image-popup to-animate">
                     <img src="images/work_1.jpg" alt="Image" class="img-responsive">
                     <div class="fh5co-text">
-                        <h2>Project 1</h2>
+                        <h2>Acesse o projeto no GitHub</h2>
                         <span>Branding</span>
                     </div>
                 </a>
@@ -148,8 +148,8 @@
                 <a href="images/work_2.jpg" class="fh5co-project-item image-popup to-animate">
                     <img src="images/work_2.jpg" alt="Image" class="img-responsive">
                     <div class="fh5co-text">
-                        <h2>Project 2</h2>
-                        <span>Web</span>
+                        <h2>GitHub</h2>
+                        <span>Dê um favorito no projeto! É simples é só clicar na estrelinha ;)</span>
                     </div>
                 </a>
             </div>
@@ -254,27 +254,28 @@
             <div class="col-md-12">
                 <div class="box-testimony">
                     <form method="post" action="/curso/participar">
+                        <input type="hidden" name="para[confirmado]" value="0"/>
                         <div class="to-animate fadeInUp animated">
                             <h3>Preencha o formulário para participar, mantenha seu usuário e email e convide seus
                                 amigos !</h3>
                             <div class="form-group ">
                                 <label for="de_usuario_github" class="sr-only">Seu usuário do GitHub</label>
-                                <input id="de_usuario_github" name="de_usuario_github" class="form-control" placeholder="Seu usuário do GitHub" type="text">
+                                <input id="de_usuario_github" name="de[usuario_github]" class="form-control" placeholder="Seu usuário do GitHub" type="text">
                             </div>
                             <div class="form-group ">
                                 <label for="de_email" class="sr-only">Seu e-mail</label>
-                                <input id="de_email" name="de_email" class="form-control" placeholder="Seu e-mail" type="email">
+                                <input id="de_email" name="de[email]" class="form-control" placeholder="Seu e-mail" type="email">
                             </div>
                             <div class="form-group ">
                                 <label for="para_usuario_github" class="sr-only">Usuário do GitHub de quem você quer convidar</label>
                                 <input id="para_usuario_github" class="form-control"
-                                       name="para_usuario_github"
+                                       name="para[usuario_github]"
                                        placeholder="Usuário do GitHub de quem você quer convidar" type="text">
                             </div>
                             <div class="form-group ">
                                 <label for="para_email" class="sr-only">E-mail de quem você quer convidar</label>
                                 <input id="para_email" class="form-control"
-                                       name="para_email"
+                                       name="para[email]"
                                        placeholder="E-mail de quem você quer convidar"/>
                             </div>
                             <div class="form-group ">
@@ -292,11 +293,10 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 section-heading text-center">
-                <h2 class="to-animate">About</h2>
+                <h2 class="to-animate">Realização</h2>
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2 subtext to-animate">
-                        <h3>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                            there live the blind texts.</h3>
+                        <h3>Em uma parceria com Webschool.io</h3>
                     </div>
                 </div>
             </div>
@@ -305,7 +305,7 @@
             <div class="col-md-4">
                 <div class="fh5co-person text-center to-animate">
                     <figure><img src="images/person1.jpg" alt="Image"></figure>
-                    <h3>Jean Smith</h3>
+                    <h3>Matheus Marabesi</h3>
                     <span class="fh5co-position">Web Designer</span>
                     <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
                         live the blind texts</p>
@@ -319,7 +319,7 @@
             <div class="col-md-4">
                 <div class="fh5co-person text-center to-animate">
                     <figure><img src="images/person2.jpg" alt="Image"></figure>
-                    <h3>Rob Smith</h3>
+                    <h3>Michael Douglas</h3>
                     <span class="fh5co-position">Web Developer</span>
                     <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
                         live the blind texts</p>
@@ -333,7 +333,7 @@
             <div class="col-md-4">
                 <div class="fh5co-person text-center to-animate">
                     <figure><img src="images/person3.jpg" alt="Image"></figure>
-                    <h3>Larry Ben</h3>
+                    <h3>Vinícius</h3>
                     <span class="fh5co-position">Web Designer</span>
                     <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
                         live the blind texts</p>

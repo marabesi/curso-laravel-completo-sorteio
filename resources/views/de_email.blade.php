@@ -23,14 +23,14 @@
         <div class="container">
             <h1>Curso-PHP-Laravel-Completo-E-Total</h1>
 
-            <p>Olá, <strong>{{$params['para_usuario_github']}}</strong></p>
-            <p>O seu amigo <strong>{{$params['de_usuario_github']}}</strong> quer lhe conviar para conhecer o curso de Laravel
+            <p>Olá, <strong>{{$params['para']['usuario_github']}}</strong></p>
+            <p>O seu amigo <strong>{{$params['de']['usuario_github']}}</strong> quer lhe conviar para conhecer o curso de Laravel
                 totalmente de graça fornecido pela <a href="https://github.com/Webschool-io/Curso-PHP-Laravel-Completo-E-Total" target="_blank">webschool.io</a>.
             </p>
 
             <p>Esse é um convite especial enviado pelo seu amigo que deseja concorrer ao sorteio que vamos realizar. </p>
 
-            <h2><a href="{{asset(sprintf('/curso/confirmar-participacao/%s/%s', $params['token'], $params['de_usuario_github']))}}" target="_blank">Para confirmar o convite enviado clique aqui</a></h2>
+            <h2><a href="{{asset(sprintf('/curso/confirmar-participacao/%s/%s', $params['token'], $params['de']['usuario_github']))}}" target="_blank">Para confirmar o convite enviado clique aqui</a></h2>
         </div>
         <div class="container">
             <h1>Realização e apoio</h1>
