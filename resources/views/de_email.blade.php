@@ -30,7 +30,7 @@
 
             <p>Esse é um convite especial enviado pelo seu amigo que deseja concorrer ao sorteio que vamos realizar. </p>
 
-            <h2><a href="{{asset(sprintf('/curso/confirmar-participacao/%s/%s', $params['token'], $params['de']['usuario_github']))}}" target="_blank">Para confirmar o convite enviado clique aqui</a></h2>
+            <h2><a href="{{asset(sprintf('/curso/confirmar-participacao/%s/%s', $params['para']['token'], $params['de']['usuario_github']))}}" target="_blank">Para confirmar o convite enviado clique aqui</a></h2>
         </div>
         <div class="container">
             <h1>Realização e apoio</h1>

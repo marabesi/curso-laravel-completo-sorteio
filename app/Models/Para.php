@@ -19,6 +19,6 @@ class Para extends Model {
 
     public function convite()
     {
-        return $this->belongsToMany('App\Models\Convite', 'tb_convite','id_de', 'id_para');
+        return $this->belongsToMany('App\Models\Convite', 'tb_convite', 'id_para', 'id_de');
     }
 }

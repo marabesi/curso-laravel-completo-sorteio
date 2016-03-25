@@ -219,15 +219,15 @@
 					setTimeout(function() {
 						$('#fh5co-work .to-animate').each(function( k ) {
 							var el = $(this);
-							
+
 							setTimeout ( function () {
 								el.addClass('fadeInUp animated');
 							},  k * 200, 'easeInOutExpo' );
-							
+
 						});
 					}, 200);
 
-					
+
 					$(this.element).addClass('animated');
 						
 				}
@@ -281,10 +281,10 @@
 
 	var servicesAnimate = function() {
 		var services = $('#fh5co-services');
-		if ( services.length > 0 ) {	
+		if ( services.length > 0 ) {
 
 			services.waypoint( function( direction ) {
-										
+
 				if( direction === 'down' && !$(this.element).hasClass('animated') ) {
 
 					var sec = services.find('.to-animate').length,
@@ -293,29 +293,29 @@
 					setTimeout(function() {
 						services.find('.to-animate').each(function( k ) {
 							var el = $(this);
-							
+
 							setTimeout ( function () {
 								el.addClass('fadeInUp animated');
 							},  k * 200, 'easeInOutExpo' );
-							
+
 						});
 					}, 200);
 
 					setTimeout(function() {
 						services.find('.to-animate-2').each(function( k ) {
 							var el = $(this);
-							
+
 							setTimeout ( function () {
 								el.addClass('bounceIn animated');
 							},  k * 200, 'easeInOutExpo' );
-							
+
 						});
 					}, sec);
 
 
-					
+
 					$(this.element).addClass('animated');
-						
+
 				}
 			} , { offset: '80%' } );
 
@@ -426,20 +426,45 @@
 					}, 200);
 
 					$(this.element).addClass('animated');
-						
+
 				}
 			} , { offset: '80%' } );
 
 		}
 	};
 
+	var form = function() {
+		$('form').validate({
+			rules: {
+				"de[usuario_github]": "required",
+				"de[email]": {
+					required: true,
+					email: true
+				},
+				"para[usuario_github]": "required",
+				"para[email]": {
+					required: true,
+					email: true
+				}
+			},
+			messages: {
+				"de[usuario_github]": "Esse campo é obrigatório",
+				"de[email]": {
+					required: "Esse campo é obrigatório",
+					email: "Digite um e-mail válido"
+				},
+				"para[usuario_github]": "Esse campo é obrigatório",
+				"para[email]": {
+					required: "Esse campo é obrigatório",
+					email: "Digite um e-mail válido"
+				},
+			}
+		});
 
-	
-	
+		$('.error-message').hide();
+		$('.success-message').hide();
 
-
-	
-	
+	};
 
 	// Document on load.
 	$(function(){
@@ -466,9 +491,39 @@
 		aboutAnimate();
 		countersAnimate();
 		contactAnimate();
-		
+
+		form();
 
 	});
 
 
 }());
+
+$.validator.setDefaults({
+	submitHandler: function(form) {
+		$('.error-message').hide();
+
+		$.ajax({
+			url: $(form).attr('action'),
+			method: $(form).attr('method'),
+			data: $(form).serialize(),
+			success: function(response) {
+				if (response.erro === true) {
+					$('.error-message').html(response.mensagem);
+					$('.error-message').show();
+				} else {
+					$('.box-testimony').fadeOut('slow', function() {
+						$(this).remove();
+						$('.success-message').show();
+					});
+				}
+			},
+			error: function() {
+				$('.error-message').html('Ocorreu um erro ao tentar processar a sua requisição');
+				$('.error-message').show();
+			}
+		});
+
+		return false;
+	}
+});

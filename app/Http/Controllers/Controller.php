@@ -40,7 +40,10 @@ class Controller extends BaseController
         $find = $para->where('email', $params['para']['email']);
 
         if ($find->count()) {
-            return new JsonResponse('Esse email já foi convidado para participar do sorteio');
+            return new JsonResponse([
+                'mensagem' => 'Esse email já foi convidado para participar do sorteio',
+                'erro' => true
+            ]);
         }
 
         $de = new De($params['de']);
@@ -49,8 +52,8 @@ class Controller extends BaseController
         $params['para']['token'] = sprintf('%s|%s|%s', $params['de']['email'], $params['de']['usuario_github'], $de->id);
 
         $para = new Para($params['para']);
-        $para->save();
 
+        $para->save();
         $para->convite()->attach($de->id);
 
         $mailer->send('de_email', [ 'params' => $params ], function($email) use ($params) {
@@ -65,7 +68,10 @@ class Controller extends BaseController
             $email->subject(sprintf('Você acabou de convidar %s!', $params['para']['usuario_github']));
         });
 
-        return new JsonResponse(['mensagem' => 'Convite de participação enviado']);
+        return new JsonResponse([
+            'mensagem' => 'Convite de participação enviado',
+            'erro' => false
+        ]);
     }
 
     /**
