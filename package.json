@@ -2,12 +2,10 @@
   "private": true,
   "dependencies": {
     "laravel-elixir": "^4.0.0",
-    "bootstrap-sass": "^3.0.0"
+    "bootstrap-sass": "^3.0.0",
+    "gulp": "^3.9.1"
   },
   "scripts": {
-    "postinstall": "npm install --global gulp && gulp"
-  },
-  "devDependencies": {
-    "gulp": "^3.9.1"
+    "postinstall": "gulp"
   }
 }
