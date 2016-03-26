@@ -89,9 +89,9 @@ class Controller extends BaseController
                 'confirmado' => true
             ]);
 
-            return new JsonResponse('Convite confirmado com sucesso');
+            return view('confirmar', ['mensagem' => 'Convite confirmado com sucesso! :)']);
         }
 
-        return new JsonResponse('Não foi possível confirmar o convite');
+        return view('confirmar', ['mensagem' => 'Não foi possível confirmar o convite :(']);
     }
 }
