@@ -216,7 +216,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="fh5co-person text-center to-animate">
                         <figure><img src="images/person2.jpg" alt="Image"></figure>
                         <h3>Matheus Marabesi</h3>
@@ -227,7 +227,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="fh5co-person text-center to-animate">
                         <figure><img src="images/person1.jpg" alt="Image"></figure>
                         <h3>Michael Douglas</h3>
@@ -238,7 +238,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="fh5co-person text-center to-animate">
                         <figure><img src="images/person3.jpg" alt="Image"></figure>
                         <h3>Vinícius Reis</h3>
@@ -246,6 +246,17 @@
                             <li><a href="https://twitter.com/LuizVinicius73" target="_blank"><i class="icon-twitter"></i></a></li>
                             <li><a href="https://www.facebook.com/LuizVinicius73/" target="_blank"><i class="icon-facebook"></i></a></li>
                             <li><a href="https://github.com/vinicius73" target="_blank"><i class="icon-github"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="fh5co-person text-center to-animate">
+                        <figure><img src="images/person4.jpg" alt="Image"></figure>
+                        <h3>Mateus Guimarães</h3>
+                        <ul class="social social-circle">
+                            <li><a href="https://twitter.com/mateusjatenee" target="_blank"><i class="icon-twitter"></i></a></li>
+                            <li><a href="https://www.facebook.com/mateus.guimaraes.71" target="_blank"><i class="icon-facebook"></i></a></li>
+                            <li><a href="https://github.com/mateusjatenee" target="_blank"><i class="icon-github"></i></a></li>
                         </ul>
                     </div>
                 </div>
