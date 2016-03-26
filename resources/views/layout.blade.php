@@ -64,7 +64,7 @@
 <script src="/js/jquery.countTo.js"></script>
 <script src="/js/jquery.magnific-popup.min.js"></script>
 <script src="/js/magnific-popup-options.js"></script>
-<script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.js"></script>
+<script src="/js/jquery.validate.js"></script>
 
 <script src="/js/main.js"></script>
 
