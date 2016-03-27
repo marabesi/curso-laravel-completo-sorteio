@@ -216,6 +216,17 @@
                 </div>
             </div>
             <div class="row">
+                <div class="col-md-12">
+                    <div class="fh5co-person text-center to-animate">
+                        <figure><img src="images/person1.jpg" alt="Image"></figure>
+                        <h3>Michael Douglas</h3>
+                        <ul class="social social-circle">
+                            <li><a href="https://twitter.com/mdba_araujo" target="_blank"><i class="icon-twitter"></i></a></li>
+                            <li><a href="https://www.facebook.com/mdba.araujo" target="_blank"><i class="icon-facebook"></i></a></li>
+                            <li><a href="https://github.com/michaeldouglas" target="_blank"><i class="icon-github"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="col-md-3">
                     <div class="fh5co-person text-center to-animate">
                         <figure><img src="images/person2.jpg" alt="Image"></figure>
@@ -224,17 +235,6 @@
                             <li><a href="https://twitter.com/MatheusMarabesi" target="_blank"><i class="icon-twitter"></i></a></li>
                             <li><a href="https://www.facebook.com/matheusmarabesi" target="_blank"><i class="icon-facebook"></i></a></li>
                             <li><a href="https://github.com/marabesi" target="_blank"><i class="icon-github"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="fh5co-person text-center to-animate">
-                        <figure><img src="images/person1.jpg" alt="Image"></figure>
-                        <h3>Michael Douglas</h3>
-                        <ul class="social social-circle">
-                            <li><a href="https://twitter.com/mdba_araujo" target="_blank"><i class="icon-twitter"></i></a></li>
-                            <li><a href="https://www.facebook.com/mdba.araujo" target="_blank"><i class="icon-facebook"></i></a></li>
-                            <li><a href="https://github.com/michaeldouglas" target="_blank"><i class="icon-github"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -257,6 +257,17 @@
                             <li><a href="https://twitter.com/wendell_adriel" target="_blank"><i class="icon-twitter"></i></a></li>
                             <li><a href="https://www.facebook.com/wendell.adriel.7" target="_blank"><i class="icon-facebook"></i></a></li>
                             <li><a href="https://github.com/WendellAdriel" target="_blank"><i class="icon-github"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="fh5co-person text-center to-animate">
+                        <figure><img src="images/person4.jpg" alt="Image"></figure>
+                        <h3>Mateus Guimarães</h3>
+                        <ul class="social social-circle">
+                            <li><a href="https://twitter.com/mateusjatenee" target="_blank"><i class="icon-twitter"></i></a></li>
+                            <li><a href="https://www.facebook.com/mateus.guimaraes.71" target="_blank"><i class="icon-facebook"></i></a></li>
+                            <li><a href="https://github.com/mateusjatenee" target="_blank"><i class="icon-github"></i></a></li>
                         </ul>
                     </div>
                 </div>
