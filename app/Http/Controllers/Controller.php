@@ -46,6 +46,13 @@ class Controller extends BaseController
             ]);
         }
 
+        if ($params['de']['email'] == $params['para']['email']) {
+            return new JsonResponse([
+                'mensagem' => 'Você não pode se auto-convidar, escolha o e-mail de um amigo seu',
+                'erro' => true
+            ]);
+        }
+
         $de = new De($params['de']);
         $de->save();
 
