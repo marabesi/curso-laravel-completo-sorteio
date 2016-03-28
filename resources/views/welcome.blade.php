@@ -193,7 +193,7 @@
                                            placeholder="E-mail de quem você quer convidar" required/>
                                 </div>
                                 <div class="form-group ">
-                                    <input class="btn btn-primary btn-lg" value="Convidar !" type="submit">
+                                    <input class="btn btn-primary btn-lg" id="submit-button" value="Convidar !" type="submit">
                                 </div>
                             </div>
                         </form>

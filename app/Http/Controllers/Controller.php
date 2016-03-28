@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\De;
 use App\Models\Para;
+use App\Services\UsuarioGithub;
 use Illuminate\Http\Request;
 use Illuminate\Mail\Mailer;
 use Illuminate\Routing\Controller as BaseController;
@@ -13,16 +14,13 @@ class Controller extends BaseController
 {
 
     /**
-     * @var \App\Models\De
+     * @var \App\Services\UsuarioGithub
      */
-    private $de;
+    private $github;
 
-    /**
-     * @param \App\Models\De $de
-     */
-    public function __construct(De $de)
+    public function __construct(UsuarioGithub $github)
     {
-        $this->de = $de;
+        $this->github = $github;
     }
 
     /**
@@ -35,6 +33,19 @@ class Controller extends BaseController
     {
         $params = $request->all();
 
+        if (!$this->github->verificarExistencia($params['de']['usuario_github'])) {
+            return new JsonResponse([
+                'mensagem' => 'Por favor informe o seu usuário válido do Github',
+                'erro' => true
+            ]);
+        }
+
+        if (!$this->github->verificarExistencia($params['para']['usuario_github'])) {
+            return new JsonResponse([
+                'mensagem' => 'O usuário do Github de seu amigo deve ser um válido',
+                'erro' => true
+            ]);
+        }
 
         $para = new Para();
         $find = $para->where('email', $params['para']['email']);

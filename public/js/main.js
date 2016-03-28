@@ -501,6 +501,7 @@
 
 $.validator.setDefaults({
 	submitHandler: function(form) {
+		$('#submit-button').attr('disabled', true);
 		$('.error-message').hide();
 
 		$.ajax({
@@ -517,6 +518,8 @@ $.validator.setDefaults({
 						$('.success-message').show();
 					});
 				}
+
+				$('#submit-button').attr('disabled', false);
 			},
 			error: function() {
 				$('.error-message').html('Ocorreu um erro ao tentar processar a sua requisição');
