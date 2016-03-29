@@ -22,6 +22,12 @@ Esse repositório apesar de possuir uma aplicação simples possui alguns concei
 2. A utilização do elixir para gerenciar os nossos assets
 3. A utilização de migrations para as tabelas do banco de dados
 
+## Fique antenado
+
+O nosso canal do slack é junto com o do da webschool.io, então acesse https://webschoolbr.slack.com e procure pelo canal **curso-laravel**
+
+![Slack](http://s12.postimg.org/ynqtaqpql/slack.png)
+
 # Quer mais ?
 
 O curso oficial de laravel você confere em https://github.com/Webschool-io/Curso-PHP-Laravel-Completo-E-Total
