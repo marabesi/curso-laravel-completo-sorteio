@@ -31,3 +31,45 @@ O nosso canal do slack é junto com o do da webschool.io, então acesse https://
 # Quer mais ?
 
 O curso oficial de laravel você confere em https://github.com/Webschool-io/Curso-PHP-Laravel-Completo-E-Total
+
+# Começando
+
+A primeira coisa que devemos fazer é clonar o repositório
+
+```
+git clone https://github.com/marabesi/curso-laravel-completo-sorteio.git && cd curso-laravel-completo-sorteio
+```
+
+O segundo passo e configurar o seu **.env** para que se conecte corretamente no banco de dados, veja uma configuraçao simples a seguir como exemplo
+
+```
+DB_DATABASE=curso_laravel
+DB_USERNAME=postgres
+DB_PASSWORD=123456
+APP_ENV=development
+APP_DEBUG=true
+```
+
+Agora o que precisamos fazer é executar as migrations para que seja executado os scripts para subir a estrutura de banco de dados
+
+```
+php artisan migrate
+```
+
+A seguinte resposta deve ser exibida ao executar o script acima
+
+```
+Migration table created successfully.
+Migrated: 2016_03_05_221433_TabelaDe
+Migrated: 2016_03_05_222233_TabelaPara
+Migrated: 2016_03_05_224832_TabelaConvite
+```
+
+O último passo é executar o servidor embutido que o laravel fornece para nós e acessar a nossa aplicação
+em um navegador qualquer
+
+```
+php artisan serve
+```
+
+Abra seu navegador e acesse o endereço **http://localhost:8000** e divirta-se !
