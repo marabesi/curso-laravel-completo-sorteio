@@ -18,9 +18,27 @@ class Controller extends BaseController
      */
     private $github;
 
-    public function __construct(UsuarioGithub $github)
+    /**
+     * @var \App\Models\De
+     */
+    private $de;
+
+    /**
+     * @var \App\Models\Para
+     */
+    private $para;
+
+    /**
+     * Controller constructor.
+     * @param UsuarioGithub $github
+     * @param \App\Models\De $de
+     * @param \App\Models\Para $para
+     */
+    public function __construct(UsuarioGithub $github, De $de, Para $para)
     {
         $this->github = $github;
+        $this->de = $de;
+        $this->para = $para;
     }
 
     /**
