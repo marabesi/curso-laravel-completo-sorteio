@@ -12,6 +12,16 @@ Para concorrer aos prêmios basta seguir os seguintes passos:
 
 Com isso você ja está dentro do sorteio, é só esperar e torcer.
 
+## O livro
+
+Saiba mais sobre o livro direto na casa do código clicando [aqui](https://www.casadocodigo.com.br/products/livro-certificacao-php)
+
+![Zend Certified Engineer - Descomplicando a certificação  PHP](http://s31.postimg.org/hb7tfx72j/f7mrq_KK_ih_QQVJJT3_Eq_E0_Po_FQk7_7_Hh5_YPSj8u_FSj8_size.jpg)
+
+## A camiseta
+
+![Camiseta estilo preto](http://s31.postimg.org/dqea93rpn/camisa_1.jpg)
+
 # Aprenda com esse repositório também
 
 Como estamos fazendo um curso de laravel nada mais justo do que criarmos aplicações reais com o laravel, não é mesmo ?
