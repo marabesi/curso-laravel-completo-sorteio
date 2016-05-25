@@ -60,7 +60,7 @@
                     <div class="overlay-darker"></div>
                     <div class="overlay"></div>
                     <div class="fh5co-text">
-                        <img src="http://d3mlabs.de/assets/Learning_blue_Icon-c1092b82f9eee7286a24cf70d0e11477.png" width="79"/>
+                        <img src="https://www.govdelivery.com/wp-content/uploads/image/png/icon_learning.png" width="79"/>
                         <h2>O curso</h2>
                         <p>Da instalação ao teste unitário e seguindo as melhores práticas de programação, tudo isso em um só lugar e totalmente de graça</p>
                         <p><a href="https://github.com/Webschool-io/Curso-PHP-Laravel-Completo-E-Total" target="_blank" class="btn btn-primary">Acesse o site</a></p>
