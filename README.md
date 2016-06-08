@@ -22,7 +22,9 @@ Saiba mais sobre o livro direto na casa do código clicando [aqui](https://www.c
 
 ![Camiseta estilo preto](http://s31.postimg.org/dqea93rpn/camisa_1.jpg)
 
-# Aprenda com esse repositório também
+# A divulgação do ganhor(a) será realizada na [#LaraconfBrasil2016](http://laraconfbrasil.com.br/)
+
+## Aprenda com esse repositório também
 
 Como estamos fazendo um curso de laravel nada mais justo do que criarmos aplicações reais com o laravel, não é mesmo ?
 
