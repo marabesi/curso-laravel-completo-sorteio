@@ -62,6 +62,12 @@ APP_ENV=development
 APP_DEBUG=true
 ```
 
+Feito isso você deve rodar o composer e npm para instalar as dependências do projeto
+
+```
+composer install; npm install
+```
+
 Agora o que precisamos fazer é executar as migrations para que seja executado os scripts para subir a estrutura de banco de dados
 
 ```
