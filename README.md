@@ -1,4 +1,6 @@
-# Curso laravel completo sorteio
+# ATENÇÃO - O sorteio foi realizado no dia 08 de Outubro de 2016 na LaraconfBrasil 
+
+## Curso laravel completo sorteio
 
 Repositório com a aplicação desenvolvida para sortear os brindes do curso de laravel fornecido pelo Webschool.io
 
@@ -21,8 +23,6 @@ Saiba mais sobre o livro direto na casa do código clicando [aqui](https://www.c
 ## A camiseta
 
 ![Camiseta estilo preto](http://s31.postimg.org/dqea93rpn/camisa_1.jpg)
-
-# A divulgação do ganhor(a) será realizada na [#LaraconfBrasil2016](http://laraconfbrasil.com.br/)
 
 ## Aprenda com esse repositório também
 
